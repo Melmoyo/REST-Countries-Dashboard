@@ -1,73 +1,26 @@
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# REST Countries Dashboard
+An interactive data dashboard built on the [REST Countries
+API](https://restcountries.com) that visualises global statistics — top countries
+by population, largest by area, and most widely spoken languages.
+## Live Demo
+[View Live](https://melmoyo.github.io/Rest-Countries-Dashboard) | [View
+Code](https://github.com/Melmoyo/Rest-Countries-Dashboard)
+## Features
+- Top 8 countries by population with visual comparison
+- Top 8 countries by land area
+- Most spoken languages ranked by number of countries
+- Data fetched live from the REST Countries public API
+- Clean dashboard layout with cards and data visualisation
+- Responsive design
+## What I Learned
+- Transforming and aggregating complex nested API data
+- Sorting and ranking datasets client-side
+- Building dashboard-style layouts with CSS Grid
+- Data visualisation thinking: choosing what to show and how
+## Tech Stack
+- HTML, CSS, JavaScript (vanilla), TalwindCSS, TypeScript, ReactJS
+- REST Countries API
+- Fetch API / async-await
+## Run Locally
+```bash
+git clone https://github.com/Melmoyo/Rest-Countries-Dashboard.git
